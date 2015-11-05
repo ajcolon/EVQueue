@@ -6,9 +6,14 @@
         .controller('LoginController', LoginController);
 
     /** @ngInject */
-    function LoginController($log,LoginService) {
-        //var vm = this;
-        $log.log("LoginController Init")
+    function LoginController($log,LoginService,$state) {
+        var vm = this;
+        vm.user = null;
+        vm.logUser = function(){
+            $log.log("user");
+            LoginService.logUser(vm.user);
+            $state.go("queue");
+        };
 
     }
 })();

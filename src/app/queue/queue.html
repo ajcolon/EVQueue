@@ -1,1 +1,7 @@
-LIST HERE
+<div class="container queue-view">
+    <button type="button" class="btn btn-info" ng-click="vm.joinQueue()">Refresh List</button>
+    <button type="button" class="btn btn-info" ng-disabled="vm.userIsQueued" ng-click="vm.joinQueue()">Join Queue</button>
+    <div class="row item" ng-repeat="q in vm.queue">
+        <div ng-bind="q.username"></div>
+    </div>
+</div>

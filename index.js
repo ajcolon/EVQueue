@@ -9,6 +9,10 @@ app.get('/api/queue', function(request, response) {
   response.send(queue);
 });
 
+app.post('/api/queue', function(request, response) {
+  response.send("OK");
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
@@ -17,5 +21,9 @@ var queue = [
   {"username":"Joel"},
   {"username":"David"}
 ];
+
+setTimeout(function(){
+  queue = [];
+},86400000);
 
 

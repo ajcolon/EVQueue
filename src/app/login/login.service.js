@@ -6,8 +6,14 @@
         .service('LoginService', LoginService);
 
 
-    function LoginService(API) {
-        debugger;
+    function LoginService() {
+        var user = null;
+        this.logUser = function(username){
+            user = username;
+        };
+        this.getUser = function(){
+            return user;
+        }
     }
 
 })();
