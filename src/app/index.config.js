@@ -1,21 +1,30 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-    .module('EVQueue')
-    .config(config);
+    angular
+        .module('EVQueue')
+        .config(config);
 
-  /** @ngInject */
-  function config($logProvider, toastrConfig) {
-    // Enable log
-    $logProvider.debugEnabled(true);
+    /** @ngInject */
+    function config($logProvider, $stateProvider) {
+        // Enable log
+        $logProvider.debugEnabled(true);
 
-    // Set options third-party lib
-    toastrConfig.allowHtml = true;
-    toastrConfig.timeOut = 3000;
-    toastrConfig.positionClass = 'toast-top-right';
-    toastrConfig.preventDuplicates = true;
-    toastrConfig.progressBar = true;
-  }
+        $stateProvider
+            .state('login', {
+                url: '/login',
+                templateUrl: 'login/login.html',
+                controller: 'LoginController',
+                controllerAs: 'vm'
+            })
+            .state('queue', {
+                url: '/queue',
+                templateUrl: 'login/queue.html',
+                controller: 'QueueController',
+                controllerAs: 'vm'
+            })
+            .otherwise('/queue');
+
+    }
 
 })();

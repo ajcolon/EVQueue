@@ -2,7 +2,7 @@
 <html ng-app="myNewProject">
   <head>
     <meta charset="utf-8">
-    <title>myNewProject</title>
+    <title>FE EVQueue</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -27,7 +27,8 @@
 
     <div class="container" ng-controller="MainController as main">
 
-      <div> EVQueue</div>
+      VIEW HERE
+      <div ui-view></div>
 
     </div>
     
@@ -51,8 +52,10 @@
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
+    <script src="app/queue/queue.controller.js"></script>
     <script src="app/index.module.js"></script>
     <script src="app/main/main.controller.js"></script>
+    <script src="app/login/login.controller.js"></script>
     <script src="app/index.run.js"></script>
     <script src="app/index.constants.js"></script>
     <script src="app/index.config.js"></script>
