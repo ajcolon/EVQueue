@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('myNewProject')
+    .module('EVQueue')
     .run(runBlock);
 
   /** @ngInject */

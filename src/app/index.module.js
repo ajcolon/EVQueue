@@ -2,6 +2,5 @@
   'use strict';
 
   angular
-    .module('myNewProject', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.bootstrap', 'toastr']);
-
+    .module('EVQueue', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.bootstrap','ui.router']);
 })();
