@@ -3,10 +3,10 @@
 
     angular
         .module('EVQueue')
-        .controller('LoginController', MainController);
+        .controller('LoginController', LoginController);
 
     /** @ngInject */
-    function MainController($log) {
+    function LoginController($log,LoginService) {
         //var vm = this;
         $log.log("LoginController Init")
 

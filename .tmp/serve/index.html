@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="myNewProject">
+<html ng-app="EVQueue">
   <head>
     <meta charset="utf-8">
     <title>FE EVQueue</title>
@@ -25,7 +25,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container" ng-controller="MainController as main">
+    <div class="container" >
 
       VIEW HERE
       <div ui-view></div>
@@ -52,9 +52,10 @@
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
-    <script src="app/queue/queue.controller.js"></script>
     <script src="app/index.module.js"></script>
-    <script src="app/main/main.controller.js"></script>
+    <script src="app/queue/queue.service.js"></script>
+    <script src="app/queue/queue.controller.js"></script>
+    <script src="app/login/login.service.js"></script>
     <script src="app/login/login.controller.js"></script>
     <script src="app/index.run.js"></script>
     <script src="app/index.constants.js"></script>
