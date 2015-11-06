@@ -6,7 +6,7 @@
         .controller('QueueController', MainController);
 
     /** @ngInject */
-    function MainController($log,QueueService,$timeout) {
+    function MainController($log,QueueService,$interval) {
         $log.log("QueueController Init");
         var vm = this;
         vm.user = null;
@@ -47,7 +47,7 @@
         ];
         var currChargingIndex = 0;
         vm.currentChargingClass = chargingStates[currChargingIndex];
-        $timeout(function(){
+        $interval(function(){
             if(currChargingIndex > chargingStates.length){
                 currChargingIndex = 0;
             }else{
@@ -62,7 +62,7 @@
             });
         };
 
-        $timeout(function(){
+        $interval(function(){
             vm.getQueue();
         },30000);
 
