@@ -31,6 +31,7 @@
         vm.userIsQueued = false;
 
         vm.joinQueue = function(){
+            if(vm.user == "" || vm.user == null){return};
             vm.userIsQueued = true;
             QueueService.joinQueue({"username":vm.user}).then(function(data){
                 vm.queue = data;

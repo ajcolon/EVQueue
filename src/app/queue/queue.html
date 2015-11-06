@@ -27,12 +27,12 @@
     </div>
 
 
-    <div class="row item" ng-repeat="q in vm.queue.unplugged" ng-click="vm.removeFromQueue(q)">
+    <div class="row item" ng-repeat="q in vm.queue.unplugged">
         <div class="battery">
             <i class="fa fa-battery-empty"></i>
         </div>
         <div ng-bind="q.username"></div>
-        <div class="close-btn">
+        <div class="close-btn" ng-click="vm.removeFromQueue(q)" ng-show="$first">
             <i class="fa fa-times-circle"></i>
         </div>
     </div>

@@ -30,6 +30,18 @@ app.delete('/api/queue/:uuid', function(request, response) {
   response.status(200).send(queue);
 });
 
+app.delete('/api/queue/plugged', function(request, response) {
+  if (!request.body) return response.sendStatus(400);
+  queue.plugged = [];
+  response.status(200).send(queue);
+});
+
+app.delete('/api/queue/unplugged', function(request, response) {
+  if (!request.body) return response.sendStatus(400);
+  queue.unplugged = [];
+  response.status(200).send(queue);
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
