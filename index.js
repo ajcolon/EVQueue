@@ -20,13 +20,13 @@ app.post('/api/queue', function(request, response) {
   newuser.uuid = guid();
   queue.unplugged.push(newuser);
 
-  response.status(200).send(queue.unplugged);
+  response.status(200).send(queue);
 });
 
-app.delete('/api/queue', function(request, response) {
+app.delete('/api/queue/:uuid', function(request, response) {
   if (!request.body) return response.sendStatus(400);
-  var deluser = request.body;
-  deleteUser(deluser);
+  var deluserId = request.params.uuid;
+  deleteUser(deluserId);
   response.status(200).send(queue);
 });
 
@@ -46,17 +46,17 @@ var queue = {
 };
 
 
-function deleteUser(user){
+function deleteUser(deluserId){
   var founduser = queue.unplugged.filter(function(item){
-    return item.uuid == user.uuid;
+    return item.uuid == deluserId;
   })[0];
 
   var index = queue.unplugged.indexOf(founduser);
-  console.log("index",index);
   if(index >=0){
     queue.unplugged.splice(index,1);
     queue.plugged.push(founduser);
   }
+  //console.log(queue);
 }
 
 function guid() {

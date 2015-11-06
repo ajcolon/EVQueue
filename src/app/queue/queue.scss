@@ -32,6 +32,13 @@
       font-size: 18px;
     }
 
+    .full-bat{
+      padding-top: 10px;
+      .fa-battery-full{
+        font-size: 50px;
+      }
+    }
+
     input[type=text]{
       background-color: rgba(0, 0, 0, 0.33);
       border: none;
@@ -48,9 +55,7 @@
       border: 1px solid white;
       background-color: rgba(255, 255, 255, 0.1);
     }
-
   }
-
 
   .item{
     border: 1px solid gray;
@@ -62,5 +67,28 @@
     min-width: 300px;
     color: white;
     margin: 15px auto auto auto;
+    height: 60px;
+    padding-top: 10px;
+
+    &>div{
+      display: inline-block;
+    }
+
+    .battery{
+      float:left;
+      margin-left: 10px;
+      .fa-battery-empty{
+        transform: rotate(-90deg);
+      }
+    }
+
+    .close-btn{
+      float:right;
+      margin-right: 10px;
+      .fa-battery-empty{
+
+      }
+    }
+
   }
 }

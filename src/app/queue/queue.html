@@ -8,17 +8,21 @@
                      Simple utility app to keep track of the EV Cars queue. Go ahead and set your username and join the queue from your computer / phone whenever.
                  </p>
 
-                 <input placeholder="Username" type="text" class="form-control" id="usr">
-                <button type="button" class="btn btn-head" ng-disabled="vm.userIsQueued" ng-click="vm.joinQueue()">Join Queue</button>
+                 <input placeholder="Username" type="text" class="form-control" id="usr" ng-model="vm.user">
+                <button ng-disabled="userIsQueued" type="button" class="btn btn-head" ng-disabled="vm.userIsQueued" ng-click="vm.joinQueue()">Join Queue</button>
+                 <div class="row full-bat">
+                     <i class="fa fa-battery-full" ng-class="get"></i>
+                 </div>
             </div>
         </div>
-        <div class="row item" ng-repeat="q in vm.queue">
-            <div ng-bind="q.username"></div>
+    <div class="row item" ng-repeat="q in vm.queue.unplugged" ng-click="vm.removeFromQueue(q)">
+        <div class="battery">
+            <i class="fa fa-battery-empty"></i>
         </div>
+        <div ng-bind="q.username"></div>
+        <div class="close-btn">
+            <i class="fa fa-times-circle"></i>
+        </div>
+    </div>
+
 </div>
-
-
-<!--<div class="jumbotron">-->
-    <!--<h1>FE EVQueue</h1>-->
-    <!--<p class="lead">Welcome to the simple app to keep track of the queue for EV's at FE. Go ahead and set your username and join the queue. The queue will reset each day.</p>-->
-<!--</div>-->
