@@ -43,14 +43,17 @@
             "fa-battery-quarter",
             "fa-battery-half",
             "fa-battery-three-quarters",
-            "fa-battery-full"
+            "fa-battery-full",
+            "fa-battery-empty",
+            "fa-battery-empty",
+            "fa-battery-empty"
         ];
         vm.currentChargingClass = chargingStates[0];
         $interval(function(){
 
             var currindex = chargingStates.indexOf(vm.currentChargingClass);
 
-            if(currindex < chargingStates.length){
+            if(currindex < 5){
                 currindex++;
             }else{
                 currindex = 0;
