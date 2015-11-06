@@ -49,7 +49,7 @@
         vm.currentChargingClass = chargingStates[currChargingIndex];
         $interval(function(){
             if(currChargingIndex < chargingStates.length){
-                currChargingIndex += 1;
+                currChargingIndex++;
             }else{
                 currChargingIndex = 0;
             }
