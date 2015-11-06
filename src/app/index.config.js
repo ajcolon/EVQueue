@@ -10,7 +10,7 @@
         // Enable log
         $logProvider.debugEnabled(true);
 
-        $urlRouterProvider.otherwise('/queue');
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('login', {
@@ -20,7 +20,7 @@
                 controllerAs: 'vm'
             })
             .state('queue', {
-                url: '/queue',
+                url: '/',
                 templateUrl: 'app/queue/queue.html',
                 controller: 'QueueController',
                 controllerAs: 'vm'
