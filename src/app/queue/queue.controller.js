@@ -21,9 +21,11 @@
         };
 
         vm.getQueue = function(){
-            QueueService.getQueue().then(function(data){
+            QueueService.getTestQueue().then(function(data){
                 vm.queue = data;
             });
+
+            //vm.queue = QueueService.getTestQueue();
         };
 
         vm.userIsQueued = false;
@@ -34,6 +36,25 @@
                 vm.queue = data;
             });
         };
+
+
+        var chargingStates = [
+            "fa-battery-empty",
+            "fa-battery-quarter",
+            "fa-battery-half",
+            "fa-battery-three-quarters",
+            "fa-battery-full"
+        ];
+        var currChargingIndex = 0;
+        vm.currentChargingClass = chargingStates[currChargingIndex];
+        $timeout(function(){
+            if(currChargingIndex > chargingStates.length){
+                currChargingIndex = 0;
+            }else{
+                currChargingIndex += 1;
+            }
+            vm.currentChargingClass = chargingStates[currChargingIndex];
+        },1000);
 
         vm.removeFromQueue = function(user){
             QueueService.removeQueue(user.uuid).then(function(data){

@@ -9,12 +9,24 @@
                  </p>
 
                  <input placeholder="Username" type="text" class="form-control" id="usr" ng-model="vm.user">
-                <button ng-disabled="userIsQueued" type="button" class="btn btn-head" ng-disabled="vm.userIsQueued" ng-click="vm.joinQueue()">Join Queue</button>
-                 <div class="row full-bat">
-                     <i class="fa fa-battery-full" ng-class="get"></i>
-                 </div>
+                <button ng-disabled="vm.userIsQueued" type="button" class="btn btn-head" ng-disabled="vm.userIsQueued" ng-click="vm.joinQueue()">Join Queue</button>
+                 <!--<div class="row full-bat">-->
+                     <!--<i class="fa fa-battery-full" ng-class="get"></i>-->
+                 <!--</div>-->
             </div>
         </div>
+
+    <div class="plugged row">
+        <div class="cols" ng-repeat="p in vm.queue.plugged.slice().reverse() | limitTo: 4">
+            <span class="charging">
+                <i class="fa" ng-class=" vm.currentChargingClass"></i>
+            </span>
+            <span class="charging-text" ng-bind="p.username">
+            </span>
+        </div>
+    </div>
+
+
     <div class="row item" ng-repeat="q in vm.queue.unplugged" ng-click="vm.removeFromQueue(q)">
         <div class="battery">
             <i class="fa fa-battery-empty"></i>
