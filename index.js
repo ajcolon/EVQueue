@@ -65,7 +65,7 @@ function guid() {
       s4() + '-' + s4() + s4() + s4();
 }
 //Clear Queue
-setTimeout(function(){
+setInterval(function(){
   queue.unplugged = [];
   queue.plugged = [];
 },86400000);

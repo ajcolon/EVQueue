@@ -44,6 +44,8 @@
             "fa-battery-half",
             "fa-battery-three-quarters",
             "fa-battery-full",
+            "fa-battery-empty",
+            "fa-battery-empty",
             "fa-battery-empty"
         ];
         var currChargingIndex = 0;
