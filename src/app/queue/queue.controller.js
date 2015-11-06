@@ -43,20 +43,19 @@
             "fa-battery-quarter",
             "fa-battery-half",
             "fa-battery-three-quarters",
-            "fa-battery-full",
-            "fa-battery-empty",
-            "fa-battery-empty",
-            "fa-battery-empty"
+            "fa-battery-full"
         ];
-        var currChargingIndex = 0;
-        vm.currentChargingClass = chargingStates[currChargingIndex];
+        vm.currentChargingClass = chargingStates[0];
         $interval(function(){
-            if(currChargingIndex < chargingStates.length){
-                currChargingIndex++;
+
+            var currindex = chargingStates.indexOf(vm.currentChargingClass);
+
+            if(currindex < chargingStates.length){
+                currindex++;
             }else{
-                currChargingIndex = 0;
+                currindex = 0;
             }
-            vm.currentChargingClass = chargingStates[currChargingIndex];
+            vm.currentChargingClass = chargingStates[currindex];
         },1500);
 
         vm.removeFromQueue = function(user){
