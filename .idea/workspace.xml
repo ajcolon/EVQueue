@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="083b8b8f-c95c-4111-b822-99bcda3f2ab5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/maps/scripts/app-63dc894d41.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/maps/styles/app-132302ad89.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/scripts/app-63dc894d41.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/styles/app-132302ad89.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/index.css" afterPath="$PROJECT_DIR$/.tmp/serve/app/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/queue/queue.controller.js" afterPath="$PROJECT_DIR$/src/app/queue/queue.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/queue/queue.html" afterPath="$PROJECT_DIR$/src/app/queue/queue.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/queue/queue.scss" afterPath="$PROJECT_DIR$/src/app/queue/queue.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/partials/templateCacheHtml.js" afterPath="$PROJECT_DIR$/.tmp/partials/templateCacheHtml.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EVQueue.iws" />
@@ -71,7 +60,7 @@
             <entry file="file://$PROJECT_DIR$/src/app/queue/queue.controller.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.26184538">
-                  <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="25" selection-end-column="14" />
+                  <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -736,7 +725,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/queue/queue.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26184538">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="25" selection-end-column="14" />
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding />
         </state>
       </provider>

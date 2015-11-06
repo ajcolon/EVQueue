@@ -21,7 +21,7 @@
         };
 
         vm.getQueue = function(){
-            QueueService.getTestQueue().then(function(data){
+            QueueService.getQueue().then(function(data){
                 vm.queue = data;
             });
 
