@@ -19,7 +19,7 @@
     <div class="plugged row">
         <div class="cols" ng-repeat="p in vm.queue.plugged.slice().reverse() | limitTo: 4">
             <span class="charging">
-                <i class="fa" ng-class=" vm.currentChargingClass"></i>
+                <i class="fa fa-battery-empty" ng-class="vm.currentChargingClass"></i>
             </span>
             <span class="charging-text" ng-bind="p.username">
             </span>

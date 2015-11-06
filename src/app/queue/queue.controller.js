@@ -43,7 +43,8 @@
             "fa-battery-quarter",
             "fa-battery-half",
             "fa-battery-three-quarters",
-            "fa-battery-full"
+            "fa-battery-full",
+            "fa-battery-empty"
         ];
         var currChargingIndex = 0;
         vm.currentChargingClass = chargingStates[currChargingIndex];
@@ -54,7 +55,7 @@
                 currChargingIndex = 0;
             }
             vm.currentChargingClass = chargingStates[currChargingIndex];
-        },1000);
+        },1500);
 
         vm.removeFromQueue = function(user){
             QueueService.removeQueue(user.uuid).then(function(data){
