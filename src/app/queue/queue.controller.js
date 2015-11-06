@@ -48,10 +48,10 @@
         var currChargingIndex = 0;
         vm.currentChargingClass = chargingStates[currChargingIndex];
         $interval(function(){
-            if(currChargingIndex > chargingStates.length){
-                currChargingIndex = 0;
-            }else{
+            if(currChargingIndex < chargingStates.length){
                 currChargingIndex += 1;
+            }else{
+                currChargingIndex = 0;
             }
             vm.currentChargingClass = chargingStates[currChargingIndex];
         },1000);
