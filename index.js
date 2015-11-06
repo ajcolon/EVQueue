@@ -36,12 +36,8 @@ app.listen(app.get('port'), function() {
 
 var queue = {
   unplugged:[
-    {"username":"unplugged","uuid":"21312"},
-    {"username":"unplugged","uuid":"12312"}
   ],
   plugged:[
-    {"username":"plugged1","uuid":"12312"},
-    {"username":"plugged2","uuid":"42142"}
   ]
 };
 
