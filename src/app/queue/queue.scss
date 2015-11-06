@@ -1,16 +1,66 @@
 .queue-view{
-  .btn{
-    font-size: 30px;
+
+  .head-container{
+    overflow: hidden;
+    color:white;
+    height: 400px;
+    text-align: center;
+    background: #1c9ac1; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #1c9ac1 0%, #025e7e 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #1c9ac1), color-stop(100%, #025e7e)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #1c9ac1 0%, #025e7e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #1c9ac1 0%, #025e7e 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #1c9ac1 0%, #025e7e 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #1c9ac1 0%, #025e7e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c9ac1', endColorstr='#025e7e', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+    .header{
+      color: white;
+      padding-top: 30px;
+      font-size: 40px;
+      text-shadow: 2px 2px 14px rgba(0, 0, 0, 0.08);
+      font-weight: bold;
+    }
+
+    .subhead{
+      margin: 0px 0px 25px 0px;
+      font-size: 12px;
+    }
+
+    p{
+      margin: 5px 0px 5px 0px;
+      font-size: 18px;
+    }
+
+    input[type=text]{
+      background-color: rgba(0, 0, 0, 0.33);
+      border: none;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      height: 50px;
+      margin-top: 5px;
+      margin-bottom: 16px;
+    }
+
+    .btn{
+      font-size: 21px;
+      border: 1px solid white;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
   }
+
 
   .item{
     border: 1px solid gray;
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 7px;
     text-align: center;
     width: 50%;
-    font-size: 300%;
+    font-size: 180%;
+    background-color: #C1690B;
     min-width: 300px;
-    margin: 20px auto auto auto;
+    color: white;
+    margin: 15px auto auto auto;
   }
 }

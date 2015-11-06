@@ -1,7 +1,24 @@
-<div class="container queue-view">
-    <button type="button" class="btn btn-info" ng-click="vm.joinQueue()">Refresh List</button>
-    <button type="button" class="btn btn-info" ng-disabled="vm.userIsQueued" ng-click="vm.joinQueue()">Join Queue</button>
-    <div class="row item" ng-repeat="q in vm.queue">
-        <div ng-bind="q.username"></div>
-    </div>
+<div class="queue-view">
+
+        <div class="head-container">
+             <div class="container">
+                <div class="header">EVQueue</div>
+                <div class="subhead">Financial Engines</div>
+                 <p>
+                     Simple utility app to keep track of the EV Cars queue. Go ahead and set your username and join the queue from your computer / phone whenever.
+                 </p>
+
+                 <input placeholder="Username" type="text" class="form-control" id="usr">
+                <button type="button" class="btn btn-head" ng-disabled="vm.userIsQueued" ng-click="vm.joinQueue()">Join Queue</button>
+            </div>
+        </div>
+        <div class="row item" ng-repeat="q in vm.queue">
+            <div ng-bind="q.username"></div>
+        </div>
 </div>
+
+
+<!--<div class="jumbotron">-->
+    <!--<h1>FE EVQueue</h1>-->
+    <!--<p class="lead">Welcome to the simple app to keep track of the queue for EV's at FE. Go ahead and set your username and join the queue. The queue will reset each day.</p>-->
+<!--</div>-->

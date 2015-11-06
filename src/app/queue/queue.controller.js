@@ -6,10 +6,10 @@
         .controller('QueueController', MainController);
 
     /** @ngInject */
-    function MainController($log,QueueService,$timeout,LoginService) {
+    function MainController($log,QueueService,$timeout) {
         var vm = this;
         $log.log("QueueController Init");
-        vm.user = LoginService.getUser();
+        vm.user = null;
 
         vm.getQueue = function(){
             vm.queue = QueueService.getTestQueue();

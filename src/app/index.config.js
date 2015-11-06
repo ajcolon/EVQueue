@@ -10,7 +10,7 @@
         // Enable log
         $logProvider.debugEnabled(true);
 
-        $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/queue');
 
         $stateProvider
             .state('login', {
